@@ -17,7 +17,7 @@ app = express(),
 	serialport = require("serialport"),
 	Vec2 = require('vec2'),
 	esp8266 = require('./lib/esp8266'),
-	WebSocket = require('ws'),
+	//WebSocket = require('ws'),
 	// sleep		=	require('sleep'),
 	//sh 			= 	require('execSync'),
 	//	five		=	require("johnny-five"),
@@ -37,7 +37,7 @@ app = express(),
 	// 				parser: serialport.parsers.readline("\n")
 	// 			}),
 	Deque = require("double-ended-queue");
-other_server = require("socket.io-client")('ws://192.168.1.3:81');
+// other_server = require("socket.io-client")('ws://192.168.1.3:81');
 var sizeOf = require('image-size');
 ws = null;
 var queryLoop = null;
@@ -964,7 +964,7 @@ function write2serial_direct(command) {
 // 	}
 // });
 var W3CWebSocket = require('websocket').w3cwebsocket;
-var ws = new W3CWebSocket('ws://192.168.1.8:81/');
+var ws = new W3CWebSocket('ws://192.168.100.12:81/');
 
 // var ws = new WebSocket('ws://192.168.1.3:81');
 // ws.binaryType = "arraybuffer";
